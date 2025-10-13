@@ -3,6 +3,8 @@
 #define RENDERER_H
 
 #include "../../include/GLFW/glfw3.h"
+#include "../../include/utilities/object.h"
+
 
 class Renderer {
     private:
@@ -10,6 +12,7 @@ class Renderer {
     public:
     void pollAndSwap(GLFWwindow* window);
     void drawScene();
+    void drawArrays(Object &obj);
 };
 
 #endif 
