@@ -1,11 +1,19 @@
 
-#include "../../include/utilities/resource_manager.hpp"
+#ifndef ENGINE_H
+#define ENGINE_H
+
 #include "../../include/utilities/renderer.hpp"
+#include "../../include/utilities/window.h"
+
 
 class Engine {
-    ResourceManager manager;
     Renderer renderer;
+    Window window;
 
     public:
-    void loop();
-}
+    Engine();
+
+    void run();
+};
+
+#endif 

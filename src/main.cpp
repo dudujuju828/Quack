@@ -4,7 +4,7 @@
 
 int main() {
     Engine engine;
-    engine.loop();
+    engine.run();
 
     return 0;
 }
