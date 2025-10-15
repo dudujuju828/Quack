@@ -9,14 +9,12 @@ void Renderer::pollAndSwap(GLFWwindow * window) {
     glfwSwapBuffers(window);
 }
 
-void Renderer::drawScene() {
-    glClear(GL_COLOR_BUFFER_BIT);
+void Renderer::clearScene() {
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glClearColor(0.8f,0.8f,0.8f,1.0f);
 }
 
 void Renderer::drawArrays(Object &obj) {
-    glClear(GL_COLOR_BUFFER_BIT);
-    glClearColor(0.8f,0.8f,0.8f,1.0f);
 
     glUseProgram(obj.programID);
     glBindVertexArray(obj.VertexArrayID);

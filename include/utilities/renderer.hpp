@@ -11,7 +11,7 @@ class Renderer {
 
     public:
     void pollAndSwap(GLFWwindow* window);
-    void drawScene();
+    void clearScene();
     void drawArrays(Object &obj);
 };
 
